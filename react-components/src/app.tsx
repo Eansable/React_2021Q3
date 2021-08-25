@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
+import { CardList } from "./components/card-list/card-list";
+import { SearchBar } from "./components/search-bar/search";
 
-class App extends Component {
-  render() {
-    return <div>
-        <h1>Hello World!</h1>
-      </div>
-
-  }
+export function App() {
+      return (<main>
+        <SearchBar />
+        <CardList />
+      </main>);
 }
-
-export default App;

@@ -1,10 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const EslintPlugin = require('eslint-webpack-plugin');
 
 const esLintPlugin = (isDev) => isDev ? [] : [ new EslintPlugin({ extensions: ['ts', 'js', 'tsx', 'jsx'] }) ]
 
 module.exports = ({dev}) => ({
+  mode: dev ? 'development' : 'production',
   entry: './src/index.tsx',
   output: {
     path: path.join(__dirname, '/dist'),
@@ -37,7 +39,7 @@ module.exports = ({dev}) => ({
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: 'index.html'
     }),
     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
     ...esLintPlugin(dev)

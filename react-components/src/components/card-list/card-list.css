@@ -1,0 +1,9 @@
+.card-list {
+  background-color: rgba(0, 65, 54, 0.3);
+  width: 95%;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}

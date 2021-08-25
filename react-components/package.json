@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "webpack serve --mode development --open --hot ",
-    "build": "webpack --mode production --env dev"
+    "start": "webpack serve --open --hot --env dev",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -26,12 +26,15 @@
     "@types/react-dom": "^17.0.9",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",
+    "css-loader": "^6.2.0",
     "eslint": "^7.31.0",
     "eslint-config-airbnb-bundle": "^3.0.0",
     "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
+    "eslint-webpack-plugin": "^3.0.1",
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.1.0",
     "prettier": "2.3.2",
